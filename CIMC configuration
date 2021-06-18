@@ -1,0 +1,14 @@
+Steps to configure Cisco IMC (CIMC)
+1	Boot APIC appliance
+2	Wait for “Screen as below” to select option to configure CIMC
+3	Press F8 to select Cisco IMC Configuration (It might take some time or display RAID configuration or boot device screen for couple of time before navigating to CIMC configuration page. Don’t press any keys and simply wait for CIMC password prompt)
+4	While opening it first time – APIC will ask for default CIMC password which is by default set as “password” and prompt to change password.
+5	Enter new password and repeat new password. Press enter and this way you have changed CIMC password on APIC.
+6	You will see success message, Enter on OK and proceed to CIMC configuration page.
+7	Select appropriate options to configure IP
+
+Press “SPACE” to enable / disable any option
+Press “F10” to save current configuration
+Press “F5” to refresh configuration – usually its useful when changing IP address mode (DHCP or Static)
+Press “UP” or “DOWN” arrow keys to navigate to different options
+Press “ESC” to exit
