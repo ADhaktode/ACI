@@ -1,0 +1,24 @@
+{
+   "fabricSpNodePGrp":{
+      "attributes":{
+         "dn":"uni/fabric/funcprof/spnodepgrp-PSU_Spine_PolicyGrp",
+         "name":"PSU_Spine_PolicyGrp",
+         "descr":"XXXXX PSU policy for spines",
+         "rn":"spnodepgrp-PSU_Spine_PolicyGrp",
+         "status":"created"
+      },
+      "children":[
+         {
+            "fabricRsPsuInstPol":{
+               "attributes":{
+                  "tnPsuInstPolName":"XXXXX-PSU",
+                  "status":"created,modified"
+               },
+               "children":[
+
+               ]
+            }
+         }
+      ]
+   }
+}
