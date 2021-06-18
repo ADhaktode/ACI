@@ -1,0 +1,70 @@
+{
+   "fabricInst":{
+      "attributes":{
+         "dn":"uni/fabric",
+         "status":"modified"
+      },
+      "children":[
+         {
+            "dnsProfile":{
+               "attributes":{
+                  "name":"OptumDNS-Profile",
+                  "descr":"DNS Profile point to Optum Servers",
+                  "status":"created"
+               },
+               "children":[
+                  {
+                     "dnsDomain":{
+                        "attributes":{
+                           "name":"uhc.com",
+                           "isDefault":"true",
+                           "rn":"dom-uhc.com",
+                           "status":"created"
+                        },
+                        "children":[
+
+                        ]
+                     }
+                  },
+                  {
+                     "dnsProv":{
+                        "attributes":{
+                           "addr":"1x.x.x.x",
+                           "rn":"prov-[1x.x.x.x]",
+                           "status":"created"
+                        },
+                        "children":[
+
+                        ]
+                     }
+                  },
+                  {
+                     "dnsProv":{
+                        "attributes":{
+                           "addr":"1x.x.x.x",
+                           "preferred":"true",
+                           "rn":"prov-[1x.x.x.x]",
+                           "status":"created"
+                        },
+                        "children":[
+
+                        ]
+                     }
+                  },
+                  {
+                     "dnsRsProfileToEpg":{
+                        "attributes":{
+                           "tDn":"uni/tn-mgmt/mgmtp-default/oob-default",
+                           "status":"created"
+                        },
+                        "children":[
+
+                        ]
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   }
+}
