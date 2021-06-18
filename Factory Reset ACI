@@ -1,0 +1,15 @@
+In the event that initial provision does not work, or mistakes are made during the procedure that cannot be undone, the following procedure can be used to restore the ACI Pod fabric back to factory default settings.
+
+
+
+
+| Step | Process | Notes |
+| :------------- | :------------- |:---|
+| 1 | Run config clean shell script on all Leaf and Spine switches. This is accomplished by logging into the console of each switch and running the command ``` (none)# setup-clean-config.sh ```.  Once complete, power down all switches. | It is important to not reboot these switches after this procedure, UNTIL the APIC controllers are reset as well.  Otherwise the switches will be re-provisioned by the APICs. |
+| 2 | Connect to Console interface of each APIC (can be accomplished through the CIMC interface using reverse telnet by entering the command ``` connect host ```). | Login credentials are either the local ``` admin ``` account or the ``` rescue-user ``` account. |
+| 3a | Run command ``` apic# acidiag touch clean ``` from APIC console on **EACH** APIC controller. |  |
+| 3b | Run command ``` apic# acidiag touch setup ``` from APIC console on **EACH** APIC controller. |  |
+| 3c | Run command ``` apic# acidiag reboot ``` from APIC console on **EACH** APIC controller. | The reboot command **MUST** be run on each APIC controller within a few seconds to a minute of each other.  No APIC should complete its reboot process before the other APICs have begun theirs. |
+| 4 | Wait for first APIC controller to complete its reboot and then begin the Initial Provisioning process again, from the beginning. | Complete one controller at a time to reduce the risk of making configuration mistakes. |
+| 5 | Once all APIC controllers are completely provisioned again, wait until you are able to log into them with the ``` admin ``` account credentials. | This takes about 5 to 10 minutes following the completion of the reboot cycle on an APIC controller. |
+| 6 | When step 5 is complete and all APIC controllers have been fully reprovisioned, begin powering on all the Leaf and Spine switches.  You can then complete the fabric discovery process. |  |
