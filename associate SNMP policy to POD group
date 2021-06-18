@@ -1,0 +1,22 @@
+{
+   "fabricPodPGrp":{
+      "attributes":{
+         "dn":"uni/fabric/funcprof/podpgrp-POD-{{POD_NO}}_Policy_Grp",
+         "name":"POD-{{POD_NO}}_Policy_Grp",
+         "rn":"podpgrp-POD-{{POD_NO}}_Policy_Grp",
+         "status":"modified"
+      },
+      "children":[
+         {
+            "fabricRsSnmpPol":{
+               "attributes":{
+                  "tnSnmpPolName":"{{snmp_policy}}"
+               },
+               "children":[
+
+               ]
+            }
+         }
+      ]
+   }
+}
