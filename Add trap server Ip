@@ -1,0 +1,13 @@
+{
+   "snmpTrapFwdServerP":{
+      "attributes":{
+         "dn":"uni/fabric/snmppol-{{SNMP_Policy}}/trapfwdserver-[{{trap_server_ip}}]",
+         "addr":"{{trap_server_ip}}",
+         "status":"created,modified",
+         "rn":"trapfwdserver-[{{trap_server_ip}}]"
+      },
+      "children":[
+
+      ]
+   }
+}
