@@ -1,0 +1,37 @@
+{
+   "fabricPodP":{
+      "attributes":{
+         "dn":"uni/fabric/podprof-POD-{{POD_NO}}",
+         "name":"POD-{{POD_NO}}",
+         "descr":"All nodes in the POD",
+         "rn":"podprof-POD-{{POD_NO}}",
+         "status":"created"
+      },
+      "children":[
+         {
+            "fabricPodS":{
+               "attributes":{
+                  "dn":"uni/fabric/podprof-POD-{{POD_NO}}/pods-ALL_NODES-typ-ALL",
+                  "name":"ALL_NODES",
+                  "type":"ALL",
+                  "rn":"pods-ALL_NODES-typ-ALL",
+                  "status":"created"
+               },
+               "children":[
+                  {
+                     "fabricRsPodPGrp":{
+                        "attributes":{
+                           "tDn":"uni/fabric/funcprof/podpgrp-POD-{{POD_NO}}_Policy_Grp",
+                           "status":"created"
+                        },
+                        "children":[
+
+                        ]
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   }
+}
