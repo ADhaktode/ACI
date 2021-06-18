@@ -1,0 +1,51 @@
+{
+   "fabricSpineP":{
+      "attributes":{
+         "dn":"uni/fabric/spprof-PSU_Spine_Profile",
+         "name":"PSU_Spine_Profile",
+         "rn":"spprof-PSU_Spine_Profile",
+         "status":"created,modified"
+      },
+      "children":[
+         {
+            "fabricSpineS":{
+               "attributes":{
+                  "dn":"uni/fabric/spprof-PSU_Spine_Profile/spines-All_Spine-typ-range",
+                  "type":"range",
+                  "name":"All_Spine",
+                  "rn":"spines-All_Spine-typ-range",
+                  "status":"created,modified"
+               },
+               "children":[
+                  {
+                     "fabricNodeBlk":{
+                        "attributes":{
+                           "dn":"uni/fabric/spprof-PSU_Spine_Profile/spines-All_Spine-typ-range/nodeblk-PSU_All_Spines",
+                           "from_":"301",
+                           "to_":"310",
+                           "name":"PSU_All_Spines",
+                           "rn":"nodeblk-PSU_All_Spines",
+                           "status":"created,modified"
+                        },
+                        "children":[
+
+                        ]
+                     }
+                  },
+                  {
+                     "fabricRsSpNodePGrp":{
+                        "attributes":{
+                           "tDn":"uni/fabric/funcprof/spnodepgrp-PSU_Spine_PolicyGrp",
+                           "status":"created"
+                        },
+                        "children":[
+
+                        ]
+                     }
+                  }
+               ]
+            }
+         }
+      ]
+   }
+}
