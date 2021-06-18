@@ -1,0 +1,14 @@
+[
+
+{
+         "syslogGroup":{
+            "attributes":{
+               "annotation":"",
+               "childAction":"",
+               "descr":"",
+               "dn":"uni/fabric/slgroup-xxxxx_Syslog",
+               "format":"aci",
+               "name":"xxxxx_Syslog",
+               "status":"created,modified"
+            }} }
+]
