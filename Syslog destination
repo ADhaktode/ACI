@@ -1,7 +1,7 @@
 {
    "syslogRemoteDest":{
       "attributes":{
-         "dn":"uni/fabric/slgroup-Optum_Syslog/rdst-{{HOST}}",
+         "dn":"uni/fabric/slgroup-xxxxx_Syslog/rdst-{{HOST}}",
          "name":"",
          "descr":"",
          "format":"aci",
