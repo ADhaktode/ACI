@@ -1,0 +1,31 @@
+{
+   "fabricPodPGrp":{
+      "attributes":{
+         "dn":"uni/fabric/funcprof/podpgrp-POD-{{POD_NO}}_Policy_Grp",
+         "name":"POD-{{POD_NO}}_Policy_Grp",
+         "rn":"podpgrp-POD-{{POD_NO}}_Policy_Grp",
+         "status":"created"
+      },
+      "children":[
+         {
+            "fabricRsPodPGrpBGPRRP":{
+               "attributes":{
+                  "tnBgpInstPolName":"default",
+                  "status":"created,modified"
+               }
+            }
+         },
+         {
+            "fabricRsTimePol":{
+               "attributes":{
+                  "tnDatetimePolName":"XXXXX_NTP_SRV",
+                  "status":"created,modified"
+               },
+               "children":[
+
+               ]
+            }
+         }
+      ]
+   }
+}
