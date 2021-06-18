@@ -44,5 +44,5 @@ Step 8 : Fabric Access Policies, Profiles and Infra-OOB
    
    
    
-   Fabtory Reset ACI
+   Step 9 : Factory Reset ACI (optional)
    
