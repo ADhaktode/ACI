@@ -1,0 +1,103 @@
+1. Assign IP to CIMC of the APIC - This is done locally at the APIC via attached keyboard
+2. SSH to CIMC of the first APIC
+3. Verify serial over LAN (SOL) is enabled show sol (Brand new APIC may not have SOL enabled)
+4. Enable SOL if not enabled
+5. Configure first APIC
+6. Disable SOL
+
+
+C220-FCH2048V0Z6#
+C220-FCH2048V0Z6# show sol detail
+Serial Over LAN:
+    Enabled: no
+    Baud Rate(bps): 115200
+    Com Port: com0
+    SOL SSH Port: 2400
+C220-FCH2048V0Z6# scope sol
+C220-FCH2048V0Z6 /sol # show detail
+Serial Over LAN:
+    Enabled: no
+    Baud Rate(bps): 115200
+    Com Port: com0
+    SOL SSH Port: 2400
+C220-FCH2048V0Z6 /sol # set enabled yes
+C220-FCH2048V0Z6 /sol *# commit
+C220-FCH2048V0Z6 /sol # show detail
+Serial Over LAN:
+    Enabled: yes
+    Baud Rate(bps): 115200
+    Com Port: com0
+    SOL SSH Port: 2400
+C220-FCH2048V0Z6 /sol #
+
+
+C220-FCH2048V0Z6# scope sol
+    C220-FCH2048V0Z6 /sol # connect host
+    CISCO Serial Over LAN:
+    Press Ctrl+x to Exit the session
+
+    Cluster configuration ...
+      Fabric name: ACI Fabric1  {_Name of the Fabric_}
+      Fabric ID: 1
+      Number of controllers: 3
+      Controller name: apic1
+      POD ID: 1
+      Controller ID: 1
+      TEP address pool: 10._.0.0/16  (second oct is the pod ID more information below)
+
+      Infra VLAN ID: 10 _<Use high number that is unique>_
+      Multicast address pool: 225.0.0.0/15  <Get further clarification from Cisco>
+
+    Out-of-band management configuration ...
+      Management IP address: 10.11.166.177/23
+      Default gateway: 1x.1x.1xx.1
+      Interface speed/duplex mode: auto
+
+    admin user configuration ...
+      Strong Passwords: Y  
+      User name: admin  
+      Password: ********
+
+    The above configuration will be applied ...
+
+    Warning: TEP address pool, Infra VLAN ID and Multicast address pool
+             cannot be changed later, these are permanent until the
+             fabric is wiped.
+             
+             
+ Disable Serial Over LAN (SOL)
+ 
+ C220-FCH2048V0Z6# show sol detail
+Serial Over LAN:
+    Enabled: yes
+    Baud Rate(bps): 115200
+    Com Port: com0
+    SOL SSH Port: 2400
+C220-FCH2048V0Z6# scope sol
+C220-FCH2048V0Z6 /sol # set enabled no
+C220-FCH2048V0Z6 /sol *# commit
+C220-FCH2048V0Z6 /sol #
+C220-FCH2048V0Z6 /sol # show detail
+Serial Over LAN:
+    Enabled: no
+    Baud Rate(bps): 115200
+    Com Port: com0
+    SOL SSH Port: 2400
+C220-FCH2048V0Z6 /sol #
+
+
+
+
+Update CIMC hostname
+
+
+C220-FCH2148V1N3# scope cimc
+C220-FCH2148V1N3 /cimc # scope network
+C220-FCH2148V1N3 /cimc/network # set hostname APIC1-CIMC
+Create new certificate with CN as new hostname? [y|N]
+y
+New certificate will be generated on commiting changes.
+All KVM, HTTPS and SSH sessions will be disconnected.
+C220-FCH2148V1N3 /cimc/network *# commit
+Changes to the network settings will be applied immediately.
+You may lose connectivity to the Cisco IMC and may have to log in again.
