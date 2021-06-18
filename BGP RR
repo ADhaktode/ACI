@@ -1,0 +1,61 @@
+[
+  {
+    "bgpInstPol": {
+      "attributes": {
+        "descr": "Default Route Reflector Policy for Optum",
+        "dn": "uni/fabric/bgpInstP-default",
+        "name": "default",
+        "status":"modified",
+        "nameAlias": "",
+        "ownerKey": "",
+        "ownerTag": ""
+      },
+      "children": [
+        {
+          "bgpRRP": {
+            "attributes": {
+              "descr": "",
+              "name": "",
+              "nameAlias": ""
+            },
+            "children": [
+              {
+                "bgpRRNodePEp": {
+                  "attributes": {
+                    "descr": "",
+                    "id": "{{spine1}}",
+                    "nameAlias": "",
+                    "status":"created,modified",
+                    "podId": "1"
+                  }
+                }
+              },
+              {
+                "bgpRRNodePEp": {
+                  "attributes": {
+                    "descr": "",
+                    "id": "{{spine2}}",
+                    "nameAlias": "",
+                    "status":"created,modified",
+                    "podId": "1"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bgpAsP": {
+            "attributes": {
+              "asn": "{{ASN}}",
+              "descr": "",
+              "name": "",
+              "status":"modified,created",
+              "nameAlias": ""
+            }
+          }
+        }
+      ]
+    }
+  }
+]
