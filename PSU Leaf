@@ -1,0 +1,24 @@
+{
+   "fabricLeNodePGrp":{
+      "attributes":{
+         "dn":"uni/fabric/funcprof/lenodepgrp-PSU_Leaf_PolicyGrp",
+         "name":"PSU_Leaf_PolicyGrp",
+         "descr":"XXXXXX policy for leafs",
+         "rn":"lenodepgrp-PSU_Leaf_PolicyGrp",
+         "status":"created"
+      },
+      "children":[
+         {
+            "fabricRsPsuInstPol":{
+               "attributes":{
+                  "tnPsuInstPolName":"XXXXX-PSU",
+                  "status":"created,modified"
+               },
+               "children":[
+
+               ]
+            }
+         }
+      ]
+   }
+}
