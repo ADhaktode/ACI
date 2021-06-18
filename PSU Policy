@@ -1,0 +1,15 @@
+{
+   "psuInstPol":{
+      "attributes":{
+         "dn":"uni/fabric/psuInstP-XXXXX-PSU",
+         "name":"XXXXX-PSU",
+         "adminRdnM":"rdn",
+         "descr":"XXXXX PSU policy N+N Redundancy",
+         "rn":"psuInstP-XXXXX-PSU",
+         "status":"created"
+      },
+      "children":[
+
+      ]
+   }
+}
