@@ -1,0 +1,29 @@
+{
+   "snmpPol":{
+      "attributes":{
+         "dn":"uni/fabric/snmppol-{{snmp_policy}}",
+         "name":"{{snmp_policy}}",
+         "contact":"{{contact}}",
+         "loc":"{{location}}",
+         "rn":"snmppol-{{snmp_policy}}",
+         "adminSt":"enabled",
+         "status":"created,modified"
+      },
+      "children":[
+         {
+            "snmpCommunityP":{
+               "attributes":{
+                  "dn":"uni/fabric/snmppol-{{snmp_policy}}/community-{{community_string}}",
+                  "name":"{{community_string}}",
+                  "descr":"community-string",
+                  "rn":"community-{{community_string}}",
+                  "status":"created,modified"
+               },
+               "children":[
+
+               ]
+            }
+         }
+      ]
+   }
+}
