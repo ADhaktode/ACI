@@ -1,0 +1,39 @@
+Step 1 Set Clocks Clocks have to match on APICs and SL to enable fabric discovery.
+
+Observe clock setting on APICs
+From the CLI, run the date command to view the current time.
+use the folowing on the SL to set the date to match APIC
+date +%T -s HH:MM:SS  (04:49:32)
+setup-hwclock.sh --systohc
+At this point you can point your browser to the APIC management IP and choose Fabric tab.
+
+Step 2 In the Navigation pane, click Fabric Membership. In the Work pane, in the Fabric Membership table, a single leaf switch is displayed with an ID of 0. It is the leaf switch that is connected to apic1.
+
+Step 3 Configure the ID by double-clicking the leaf switch row, and performing the following actions:
+
+In the ID Field:
+
+Place the IDs and the node names of the switches per the guideline here and click Update.
+
+Note:
+
+After an ID is assigned, it cannot be updated. The switch name can be updated by double-clicking the name and updating the Switch Name field.
+
+An IP address gets assigned to the switch, and in the Navigation pane, the switch is displayed under the pod.
+
+Step 4 Monitor the Work pane until one or more spine switches appear.
+
+Step 5 Configure the ID by double-clicking the spine switch row, and perform the following actions:
+
+In the ID Field:
+
+Place the IDs and the node names of the switches per the guideline here and click Update.
+
+Step 6 For each switch listed in the Fabric Membership table, perform the above steps: Double-click the switch, enter an ID and a Name, and click Update.
+
+Repeat for the next switch in the list.
+
+
+
+
+admin@apic1:~> show fabric membership
